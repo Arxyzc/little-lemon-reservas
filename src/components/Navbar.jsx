@@ -1,9 +1,18 @@
-export default function Navbar() {
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
     return (
-        <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50 flex items-center justify-between p-4">
-            <button className="text-2xl text-gray-600">☰</button> {/* Menú de hamburguesa */}
-            <img src="/logo.jpg" alt="Little Lemon" className="h-10" /> {/* Logo centrado */}
-            <button className="text-2xl text-gray-600">←</button> {/* Botón de regreso */}
+        <nav className="fixed top-0 w-full bg-white shadow-md flex items-center justify-between px-6 py-4 z-50">
+        <button className="text-gray-700 text-2xl">&#9776;</button> {/* Menú hamburguesa */}
+        <Link to="/">
+            <img src="logo.jpg" alt="Little Lemon" className="h-10" /> {/* Logo en el centro */}
+        </Link>
+        <Link to="/">
+            <button className="text-gray-700 text-2xl">&#8592;</button> {/* Botón de regreso */}
+        </Link>
         </nav>
     );
-}
+};
+
+export default Navbar;

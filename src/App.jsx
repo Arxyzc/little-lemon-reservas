@@ -1,13 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import ReservationForm from "./components/ReservationForm";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import ReservationsPage from "./pages/ReservationsPage";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <Router>
       <Navbar />
-      <main className="pt-16 p-4">
-        <ReservationForm />
-      </main>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/reservas" element={<ReservationsPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
+
+export default App;
+
+
