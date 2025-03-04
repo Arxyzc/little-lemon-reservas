@@ -1,4 +1,3 @@
-// src/tests/ReservationForm.test.jsx
 import { render, screen, fireEvent } from "@testing-library/react";
 import ReservationForm from "../components/ReservationForm";
 
